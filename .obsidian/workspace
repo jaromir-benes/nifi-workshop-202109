@@ -1,0 +1,126 @@
+{
+  "main": {
+    "id": "9b16c808ce7eb2ab",
+    "type": "split",
+    "children": [
+      {
+        "id": "872ee2c9abd915e0",
+        "type": "leaf",
+        "dimension": 81.28787878787878,
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "growth-model/docs/export.md",
+            "mode": "source"
+          }
+        },
+        "group": "3d570695c58a5152"
+      },
+      {
+        "id": "56b9f6ff9531a584",
+        "type": "leaf",
+        "dimension": 18.712121212121215,
+        "state": {
+          "type": "outline",
+          "state": {
+            "file": "growth-model/docs/export.md"
+          }
+        },
+        "group": "3d570695c58a5152"
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "338faf7b4f6d3c07",
+    "type": "split",
+    "children": [
+      {
+        "id": "c0a1a0c6d3f3e1bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "bb260b17611472a1",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "9c37fad1ed9b21e6",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "889458224aa3f832",
+    "type": "split",
+    "children": [
+      {
+        "id": "666dfad6603d4dbf",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "cb68b85bc0eea499",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "growth-model/docs/export.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "18990c4c82d9b885",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "growth-model/docs/export.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "active": "872ee2c9abd915e0",
+  "lastOpenFiles": [
+    "growth-model/docs/export.md",
+    "docs/intro.md",
+    "docs/gdp.md",
+    "docs/international.md",
+    "docs/export.md",
+    "docs/production-time-varying-elasticity.md",
+    "docs/production.md",
+    "docs/production-sticky-prices.md",
+    "docs/households.md",
+    "docs/title-page.md"
+  ]
+}
