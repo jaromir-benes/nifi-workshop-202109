@@ -1,4 +1,18 @@
 
+# Local production
+
+* Production technology with time-varying elasticity of substitution
+
+* Three stages of production
+  
+* Input factors
+    * Local labor
+    * Intermediate imports
+    * Local capital
+
+* Sticky prices
+
+
 $$
 \newcommand{\tsum}{\textstyle\sum}
 \newcommand{\extern}[1]{\mathrm{\mathbf{{#1}}}}
@@ -21,20 +35,6 @@ $$
 \newcommand{\flex}{\mathrm{flex}}
 \notag
 $$
-
-# Local production
-
-* Production technology with time-varying elasticity of substitution
-
-* Three stages of production
-  
-* Input factors
-    * Local labor
-    * Intermediate imports
-    * Local capital
-
-* Sticky prices
-
 
 ---
 

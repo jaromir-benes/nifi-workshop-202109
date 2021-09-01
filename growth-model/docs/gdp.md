@@ -2,7 +2,6 @@
 
 * Nominal GDP easy to introduce based on expenditure accounting
 
-
 * No single "correct" real GDP definition exists in a multi-sector model
 
 * Use Törnqvist index (good approximation for chain linking)
