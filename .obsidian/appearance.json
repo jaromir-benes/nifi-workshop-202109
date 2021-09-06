@@ -1,6 +1,6 @@
 {
   "baseFontSize": 16,
-  "cssTheme": "",
+  "cssTheme": "Solarized",
   "theme": "moonstone",
   "enabledCssSnippets": [
     "extra"

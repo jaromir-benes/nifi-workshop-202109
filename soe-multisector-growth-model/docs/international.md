@@ -64,7 +64,7 @@ where
 * First-order approximation 
 
 $$
-r^\fcy_t \approx r^\fcy_t \, \E_t \! \left[ \tfrac{e_{t+1}}{e_t} \right]
+r^\lcy_t \approx r^\fcy_t \, \E_t \! \left[ \tfrac{e_{t+1}}{e_t} \right]
 $$
 
 * Link the household foreign-currency rate to the world ("risk-free")

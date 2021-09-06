@@ -27,7 +27,7 @@ figure();
 
 subplot(2, 2, 1);
 plot(histRange, [f.l_gdp, f.l_gdp_tnd]);
-title("Trend component estimate in l_gdp");
+title("Trend component estimate in l_gdp", "interpreter", "none");
 
 subplot(2, 2, 2);
 plot(histRange, [f.rrs_tnd, f.obs_rrs_ex]);

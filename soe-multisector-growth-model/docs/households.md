@@ -39,7 +39,7 @@ $$
 Utility from consumption
 
 $$
-\newcommand{\Uc}{\kappa_{c}\ \blog \left( c_t - {c}_t^\ref \right)}
+\newcommand{\Uc}{\kappa_{c}\ \blog \left( c_t - \chi_c\,{c}_t^\ref \right)}
 U^{c}_t \equiv \Uc
 $$
 

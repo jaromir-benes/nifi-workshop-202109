@@ -69,6 +69,7 @@ z = SystemPriorWrapper.forModel(m);
 addSystemProperty(z, p);
 
 d = distribution.Normal.fromMeanStd(0.5, 0.01);
+
 addSystemPrior(z, "-S(cum_gap, 40)", d, "lowerBound", 0);
 
 seal(z);

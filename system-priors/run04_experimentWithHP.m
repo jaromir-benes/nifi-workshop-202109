@@ -35,6 +35,7 @@ plot([d.x, f.trend]);
 
 freq = 0.01:0.001:pi;
 per = 2*pi./freq;
+
 q = ffrf(hp, freq);
 
 trendGain1 = abs(q("trend", "x", :, 1));

@@ -1,34 +1,34 @@
 
 !transition-variables
 
-    ay
-    ax
-    c
-    e
-    e_exp
-    i
-    k
-    m
-    mx
-    my
-    n
-    nv
-    pc
-    pi
-    pk
-    pm
-    pm_fcy
-    pu
-    px
-    px1
-    px_fcy
-    py0
-    py1
-    py2
-    r
-    r_fcy
-    rh
-    rnfa
+    "Productivity in local production" ay
+    "Productivity in export production" ax
+    "Consumption" c
+    "Nominal exchange rate" e
+    "Expectations of nominal exchange rate" e_exp
+    "Investment" i
+    "Capital" k
+    "Import" m
+    "Import for local production" my
+    "Re-exports" mx
+    "Labor" n
+    "Variable labor" nv
+    "Price of consumption" pc
+    "Price of investment" pi
+    "Price of capital" pk
+    "Import prices" pm
+    "Import prices, FCY" pm_fcy
+    "User cost of capital" pu
+    "Export prices" px
+    "Stage T-11 export prices" px1
+    "Export prices, FCY" px_fcy
+    "Stage T-0 local production prices" py0
+    "Stage T-1 local production prices" py1
+    "Stage T-2 local production prices" py2
+    "Local interest rate" r
+    "Local interest rate, FCY" r_fcy
+    "Household effective rate" rh
+    "Effective ex-post rate on NFA" rnfa
     rw_fcy
     roc_pc
     roc_py0

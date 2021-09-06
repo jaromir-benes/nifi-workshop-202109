@@ -41,8 +41,8 @@ Export productivity process
 
 $$
 \bDelta \blog ax_t =
-\rho_{ax} \ \Delta \blog ay_{t-1} 
-+ (1-\rho_{ax}) \, \blog \roc{ay}_\ss
+\rho_{ax} \ \Delta \blog ax_{t-1} 
++ (1-\rho_{ax}) \, \blog \roc{ax}_\ss
 + (1-\rho_{ax})\, \varepsilon_{ax, t}
 $$
 

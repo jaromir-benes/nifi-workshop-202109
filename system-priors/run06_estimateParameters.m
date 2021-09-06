@@ -39,9 +39,9 @@ estimSpecs.std_eps_rs = {1, 0.01, 10};
 estimSpecs.std_eps_dl_gdp_tnd = {0.1, 0.001, 10};
 estimSpecs.std_eps_rrs_tnd = {0.1, 0.001, 10};
 
-for n = databank.fieldNames(estimSpecs)
-    estimSpecs.(n){4} = distribution.Normal.fromMeanStd(  m.(n), 0.2 );
-end
+% for n = databank.fieldNames(estimSpecs)
+%     estimSpecs.(n){4} = distribution.Normal.fromMeanStd(  m.(n), 0.2 );
+% end
 
 %
 % Maximize posterior mode which in this case consists of the data
@@ -61,6 +61,7 @@ filterOptions = {
 
 summary1
 
+
 %% Prepare system priors 
 
 z = SystemPriorWrapper.forModel(m);
@@ -74,14 +75,17 @@ z.addSystemProperty(p1);
 
 z.addSystemPrior('-S(cum_gap, 40)', distribution.Normal.fromMeanStd(0.6, 0.015));
 z.addSystemPrior('S(cum_gap, 40)-min(S(cum_gap, :))', distribution.Normal.fromMeanStd(0, 0.01));
-z.addSystemPrior('S(rs, 1)', distribution.Normal.fromMeanStd(0.25, 0.02));
+% z.addSystemPrior('S(rs, 1)', distribution.Normal.fromMeanStd(0.25, 0.02));
 
-cutoff = 40;
-p2 = ffrf(m, 2*pi/cutoff, 'systemProperty', 'X');
+
+cutoff_gdp = 40;
+cutoff_rrs = 80;
+p2 = ffrf(m, [2*pi/cutoff_gdp, 2*pi/cutoff_rrs], 'systemProperty', 'X');
+
 z.addSystemProperty(p2);
 
-z.addSystemPrior('abs(X(l_gdp_tnd, obs_l_gdp))', distribution.Normal.fromMeanStd(0.2, 0.01));
-z.addSystemPrior('abs(X(rrs_tnd, obs_rrs_ex))', distribution.Normal.fromMeanStd(0.2, 0.01));
+z.addSystemPrior('abs(X(l_gdp_tnd, obs_l_gdp, 1))', distribution.Normal.fromMeanStd(0.5, 0.002));
+z.addSystemPrior('abs(X(rrs_tnd, obs_rrs_ex, 2))', distribution.Normal.fromMeanStd(0.5, 0.0005));
 
 z.seal();
 
@@ -123,7 +127,6 @@ N = 5000;
 s = stats(pos2, theta, logpost);
 %}
 
-
 %% Posterior distribution of sacrifice ratio
 
 %{
@@ -134,6 +137,9 @@ mm = solve(mm);
 d = zerodb(m, 1:40);
 d.eps_dl_cpi_targ(1) = -1;
 s = simulate(mm, d, 1:40, 'deviation', true);
+
+figure();
+plot(s.l_gdp_gap);
 
 figure();
 histogram(s.cum_gap(40,:), normalization="pdf");
@@ -164,10 +170,17 @@ ch < ["Inflation Q/Q: dl_cpi", "Inflation Y/Y: d4l_cpi", "Inflation target: dl_c
 ch < "Policy rate: rs";
 draw(ch, s);
 
-visual.hlegend("bottom", "Estimated model with no priors", "Estimated model with system priors");
+visual.hlegend( ...
+    "bottom" ...
+    , "Calibrated" ...
+    , "Estimated with no priors" ...
+    , "Estimated with system priors" ...
+);
 
 
 %% Filter GDP trend 
+
+mm = [m, mest1, mest2];
 
 [~, x] = filter(mm, h, histRange, "meanOnly", true, "initUnit", "approxDiffuse");
 
@@ -181,5 +194,20 @@ subplot(1, 2, 2);
 plot([x.rrs_tnd, x.rrs_ex{:, 1}]);
 set(gca(), "xGrid", true, "yGrid", true, "yLimitMethod", "tight");
 
-visual.hlegend("bottom", "Data", "Estimated model with no priors", "Estimated model with system priors");
+visual.hlegend( ...
+    "bottom" ...
+    , "Calibrated" ...
+    , "Estimated with no priors" ...
+    , "Estimated model with system priors" ...
+    , "Data" ...
+);
+
+
+%%
+
+freq = 0.001 : 0.001 : pi;
+q = ffrf(mest2, freq);
+q1 = q("rrs_tnd", "obs_rrs_ex", :);
+figure();
+plot(freq, reshape(abs(q1), 1, []));
 

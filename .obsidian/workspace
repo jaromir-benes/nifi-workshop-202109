@@ -10,7 +10,7 @@
         "state": {
           "type": "markdown",
           "state": {
-            "file": "growth-model/docs/production.md",
+            "file": "system-priors/docs/system-priors-intro.md",
             "mode": "preview"
           }
         },
@@ -23,7 +23,7 @@
         "state": {
           "type": "outline",
           "state": {
-            "file": "growth-model/docs/production.md"
+            "file": "system-priors/docs/system-priors-intro.md"
           }
         },
         "group": "3d570695c58a5152"
@@ -82,7 +82,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "growth-model/docs/production.md",
+                "file": "system-priors/docs/system-priors-intro.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -99,7 +99,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "growth-model/docs/production.md"
+                "file": "system-priors/docs/system-priors-intro.md"
               }
             }
           }
@@ -112,15 +112,15 @@
   },
   "active": "872ee2c9abd915e0",
   "lastOpenFiles": [
-    "growth-model/docs/production.md",
-    "growth-model/docs/production-sticky-prices.md",
-    "growth-model/docs/_intro.md",
-    "growth-model/docs/export.md",
+    "system-priors/docs/system-priors-intro.md",
     "growth-model/docs/gdp.md",
+    "growth-model/docs/international.md",
+    "growth-model/docs/export.md",
+    "growth-model/docs/production.md",
+    "growth-model/docs/households.md",
+    "growth-model/docs/_intro.md",
+    "growth-model/docs/production-sticky-prices.md",
     "docs/intro.md",
-    "docs/gdp.md",
-    "docs/international.md",
-    "docs/export.md",
-    "docs/production-time-varying-elasticity.md"
+    "docs/gdp.md"
   ]
 }

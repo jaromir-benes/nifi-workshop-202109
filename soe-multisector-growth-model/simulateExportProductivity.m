@@ -1,3 +1,6 @@
+%%
+
+%%
 
 close all
 clear
@@ -5,7 +8,7 @@ clear
 load mat/createModel.mat m
 
 d = steadydb(m, 1:40);
-d.shk_ax(5) = log(1.10);
+d.shk_ax(1) = log(1.10);
 
 s = simulate( ...
     m, d, 1:40 ...
@@ -14,6 +17,8 @@ s = simulate( ...
 );
 
 smc = databank.minusControl(m, s, d);
+
+%% 
 
 ch = databank.Chartpack();
 ch.Range = 0:40;

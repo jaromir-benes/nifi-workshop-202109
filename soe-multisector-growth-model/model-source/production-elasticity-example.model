@@ -1,5 +1,5 @@
 
-!variables
+!transition-variables
 
     y, pa, pb
 
@@ -16,7 +16,7 @@
     epsilon
 
 
-!shocks
+!transition-shocks
 
     shk_y
     shk_pa
@@ -30,13 +30,14 @@
     theta := ((epsilon-1)/epsilon);
 
 
-!equations
+!transition-equations
 
     log(pa) = log(pa{-1}) + shk_pa !! pa = 1;
 
     log(pb) = log(pb{-1}) + shk_pb !! pb = 1;
 
     log(y) = log(y{-1}) + shk_y !! y = 1;
+
     y1 = y;
     y2 = y;
     y3 = y;
@@ -49,8 +50,12 @@
 
     % Cobb-Doublas, adjustment cost
     y2 = a2^gamma * b2^(1-gamma);
-    gamma * py2 * y2 = pa * a2 * (1 + xi * $adj_a$) !! gamma * py2 * y2 = pa * a2;
-    (1 - gamma) * py2 * y2 = pb * b2 * (1 + xi * $adj_b$) !! (1 - gamma) * py2 * y2 = pb * b2;
+
+    gamma * py2 * y2 = pa * a2 * (1 + xi * $adj_a$) ...
+        !! gamma * py2 * y2 = pa * a2;
+
+    (1 - gamma) * py2 * y2 = pb * b2 * (1 + xi * $adj_b$) ...
+        !! (1 - gamma) * py2 * y2 = pb * b2;
 
 
     % General CES
